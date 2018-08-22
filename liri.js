@@ -68,7 +68,7 @@ function runLIRI(command, term){
             request('http://www.omdbapi.com/?apikey=trilogy&t=' + movieTerm, function(error, response, body){
                 // console.log(JSON.parse(body));
                 var item = JSON.parse(body);
-                var output = "Title: " + item.Title + "\nRelease Year: " + item.Year + "\nimdb Rating: " + item.imdbRating + "\nRotten Tomato Rating: " + item.Ratings[1].Value + "\nCountry: " + item.Country + "\nLanguage(s): " + item.Language + "\nPlot: " + item.Plot + "\nActors: " + item.Plot + line;
+                var output = "Title: " + item.Title + "\nRelease Year: " + item.Year + "\nimdb Rating: " + item.imdbRating + "\nRotten Tomato Rating: " + item.Ratings[1].Value + "\nCountry: " + item.Country + "\nLanguage(s): " + item.Language + "\nPlot: " + item.Plot + "\nActors: " + item.Actors + line;
                 console.log(output);
                 var logOutput = "node liri.js " + command + " " + term + "\n" + output;
                 logResults(logOutput);
